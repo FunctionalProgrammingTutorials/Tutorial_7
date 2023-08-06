@@ -1,0 +1,4 @@
+id: file:///C:/Users/USER/Documents/UCSC/2nd%20Year-%201st%20Semester/SCS-2204_Functional%20Programming/Tutorial_7/Q3.scala:[6..6) in Input.VirtualFile("file:///C:/Users/USER/Documents/UCSC/2nd%20Year-%201st%20Semester/SCS-2204_Functional%20Programming/Tutorial_7/Q3.scala", "object")
+file:///C:/Users/USER/Documents/UCSC/2nd%20Year-%201st%20Semester/SCS-2204_Functional%20Programming/Tutorial_7/Q3.scala:1: error: expected identifier; obtained eof
+object
+      ^
