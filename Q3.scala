@@ -1,24 +1,23 @@
 object Q3{
     def main(args: Array[String]): Unit = {
-        var primeList: List[Int] = filterPrime(List(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)).filter(_ != 1)
-        println(primeList)
+        var primeList: List[Int] = List(1, 2, 3, 4, 5, 6, 7, 8, 9, 10).filter(_ > 1);
+        println(filterPrime(primeList))
+    }
+
+    def gcd(a:Int, b:Int):Int = b match{
+        case x if (b == 0) => a;
+        case x if (b > a) => gcd(b,a);
+        case _ => gcd(b,a%b); 
+    } 
+
+    def prime(p:Int, n:Int = 2): Boolean = n match{
+        case x if(p == n) => true;
+        case x if(gcd(p, n) > 1) => false;
+        case _=> prime(p, n+1);
     }
 
     val filterPrime = (numbers: List[Int]) => {
-        numbers.map(num => {
-            var flag = 0;
-            for(i <- 2 to num/2){
-                if(num == 1 || num % i == 0){
-                    flag = 1;
-                }   
-            }
-            if(flag == 0){
-                num;
-            }
-            else{
-                0;
-            }
-        }).filter(_ != 0)
+        numbers.filter(num => prime(num));
     }
 
 }
